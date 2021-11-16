@@ -1,0 +1,36 @@
+{
+  "name": "native-addon-template",
+  "version": "1.0.0",
+  "description": "Template for node native addon.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "BBfat",
+  "license": "MIT",
+  "dependencies": {
+    "node-addon-api": "^4.0.0",
+    "node-gyp-build": "^4.2.3"
+  },
+  "gypfile": true,
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "jest": "^27.0.6",
+    "prebuildify": "^4.2.0"
+  },
+  "os": [
+    "darwin",
+    "win32"
+  ],
+  "types": "index.d.ts",
+  "files": [
+    "src",
+    "binding.gyp",
+    "index.js",
+    "index.d.ts",
+    "prebuilds"
+  ],
+  "scripts": {
+    "test": "jest",
+    "install": "node-gyp-build",
+    "prebuildify": "node build.js"
+  }
+}
